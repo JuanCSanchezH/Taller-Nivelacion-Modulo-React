@@ -80,7 +80,7 @@ Respuesta a las preguntas 9 y 10.
 Luego de la instalación de React Router DOM, se procede a desarrollar la configuración de las rutas de esta manera:
 
 ````
-```javascript
+```
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -102,7 +102,7 @@ function App() {
 En este caso, se le da la funcionalidad de navegación a la aplicación y se define la cantidad de rutas a usar. También se implementa una ruta general con el path “/” para que se aplique en todas las rutas sin necesidad de agregarle a cada ruta el símbolo /.
 
 ````
-```javascript
+```
 import { Link } from 'react-router-dom';
 
 function Navigation() {
