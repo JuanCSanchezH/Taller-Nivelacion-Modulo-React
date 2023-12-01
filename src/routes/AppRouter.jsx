@@ -1,12 +1,21 @@
 import React from 'react'
-import { Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import MiContador from '../components/MiContador'
 import MiComponente from '../components/MiComponente'
+import MisProductos from '../components/MisProductos'
+import DetallesProducto from '../components/DetallesProducto'
 
 const AppRouter = () => {
   return (
-    <Routes>
-        <Route path="/micomponente" element={<MiComponente/>}></Route>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/micomponente" element={<MiComponente/>}/>
+          <Route path="/micontador" element={<MiContador/>}/>
+          <Route path="/misproductos" element={<MisProductos/>}/>
+          <Route path="/miproducto/:id" element={<DetallesProducto/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
