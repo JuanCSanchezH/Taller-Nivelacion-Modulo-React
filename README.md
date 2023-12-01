@@ -79,25 +79,30 @@ Respuesta a las preguntas 9 y 10.
 
 Luego de la instalación de React Router DOM, se procede a desarrollar la configuración de las rutas de esta manera:
 
+````
+```javascript
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path=“/”>
           <Route path="home" element={<Home />}/>
           <Route index element={<Home />}/>
           <Route path="about" component={<About />}/>
           <Route path="contact" component={<Contact />}/>
-        </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+```
+````
+
 
 En este caso, se le da la funcionalidad de navegación a la aplicación y se define la cantidad de rutas a usar. También se implementa una ruta general con el path “/” para que se aplique en todas las rutas sin necesidad de agregarle a cada ruta el símbolo /.
 
+````
+```javascript
 import { Link } from 'react-router-dom';
 
 function Navigation() {
@@ -111,6 +116,8 @@ function Navigation() {
     </nav>
   );
 }
+```
+````
 
 Utiliza el componente Link para crear enlaces entre las diferentes rutas. Este componente evita la recarga de la página completa y permite la navegación suave dentro de la SPA.
 
